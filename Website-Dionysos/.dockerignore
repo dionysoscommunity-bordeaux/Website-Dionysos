@@ -1,0 +1,12 @@
+node_modules
+.nuxt
+.output
+.git
+.cursor
+_bmad-output
+_bmad
+docs
+npm-debug.log*
+docker-compose*.yml
+*.md
+image.png

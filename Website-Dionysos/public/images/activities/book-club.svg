@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Club lecture</title>
+  <desc id="desc">Illustration d'un moment calme de club lecture en petit groupe.</desc>
+  <defs>
+    <linearGradient id="bg4" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#09001f"/>
+      <stop offset="100%" stop-color="#120733"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg4)"/>
+  <circle cx="260" cy="200" r="110" fill="#ff2bb5" fill-opacity="0.14"/>
+  <circle cx="980" cy="210" r="100" fill="#23d9ff" fill-opacity="0.15"/>
+  <rect x="180" y="260" width="840" height="360" rx="24" fill="#0d082c" stroke="#23d9ff" stroke-opacity="0.45" stroke-width="3"/>
+  <path d="M360 520 L360 340 L600 380 L600 560 Z" fill="#23d9ff" fill-opacity="0.24" stroke="#23d9ff" stroke-width="3"/>
+  <path d="M600 560 L600 380 L840 340 L840 520 Z" fill="#ff2bb5" fill-opacity="0.2" stroke="#ff2bb5" stroke-width="3"/>
+  <text x="190" y="190" fill="#7be9ff" font-family="Arial, sans-serif" font-size="56" font-weight="700">Club lecture</text>
+  <text x="190" y="700" fill="#e6e8f5" font-family="Arial, sans-serif" font-size="34">Petit groupe - Echange bienveillant et ouvert</text>
+</svg>

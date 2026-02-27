@@ -1,0 +1,127 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+publish_mode: editorial_workflow
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "pages"
+    label: "Pages principales"
+    folder: "content/pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titre", name: "title", widget: "string", required: true }
+      - { label: "Description", name: "description", widget: "text", required: true }
+      - { label: "Contenu", name: "body", widget: "markdown", required: true }
+      - { label: "SEO title", name: "seo_title", widget: "string", required: true }
+      - { label: "SEO description", name: "seo_description", widget: "text", required: true }
+      - { label: "SEO keywords", name: "seo_keywords", widget: "list", required: false }
+      - label: "Checklist publication"
+        name: "publication_checklist"
+        widget: "object"
+        required: true
+        fields:
+          - { label: "Message valide", name: "message_ok", widget: "boolean", default: false, required: true }
+          - { label: "Conformite legale verifiee", name: "legal_ok", widget: "boolean", default: false, required: true }
+          - { label: "Donnees minimales respectees", name: "data_ok", widget: "boolean", default: false, required: true }
+          - { label: "SEO complete", name: "seo_ok", widget: "boolean", default: false, required: true }
+      - { label: "Mise a jour", name: "updated_at", widget: "datetime", required: true }
+
+  - name: "testimonials"
+    label: "Temoignages"
+    folder: "content/testimonials"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Nom affiche", name: "name", widget: "string", required: true }
+      - { label: "Contexte", name: "role", widget: "string", required: true }
+      - { label: "Temoignage", name: "quote", widget: "text", required: true }
+      - { label: "SEO title", name: "seo_title", widget: "string", required: true }
+      - { label: "SEO description", name: "seo_description", widget: "text", required: true }
+      - label: "Checklist publication"
+        name: "publication_checklist"
+        widget: "object"
+        required: true
+        fields:
+          - { label: "Message valide", name: "message_ok", widget: "boolean", default: false, required: true }
+          - { label: "Conformite legale verifiee", name: "legal_ok", widget: "boolean", default: false, required: true }
+          - { label: "Donnees minimales respectees", name: "data_ok", widget: "boolean", default: false, required: true }
+          - { label: "SEO complete", name: "seo_ok", widget: "boolean", default: false, required: true }
+      - { label: "Mise a jour", name: "updated_at", widget: "datetime", required: true }
+
+  - name: "partners"
+    label: "Partenaires"
+    folder: "content/partners"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Nom", name: "name", widget: "string", required: true }
+      - { label: "Secteur", name: "sector", widget: "string", required: true }
+      - { label: "Description collaboration", name: "collaboration", widget: "text", required: true }
+      - { label: "Impact", name: "impact", widget: "text", required: true }
+      - { label: "Lien", name: "url", widget: "string", required: false }
+      - { label: "Logo", name: "logo", widget: "image", required: false }
+      - { label: "SEO title", name: "seo_title", widget: "string", required: true }
+      - { label: "SEO description", name: "seo_description", widget: "text", required: true }
+      - label: "Checklist publication"
+        name: "publication_checklist"
+        widget: "object"
+        required: true
+        fields:
+          - { label: "Message valide", name: "message_ok", widget: "boolean", default: false, required: true }
+          - { label: "Conformite legale verifiee", name: "legal_ok", widget: "boolean", default: false, required: true }
+          - { label: "Donnees minimales respectees", name: "data_ok", widget: "boolean", default: false, required: true }
+          - { label: "SEO complete", name: "seo_ok", widget: "boolean", default: false, required: true }
+      - { label: "Mise a jour", name: "updated_at", widget: "datetime", required: true }
+
+  - name: "announcements"
+    label: "Annonces"
+    folder: "content/announcements"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titre", name: "title", widget: "string", required: true }
+      - { label: "Resume", name: "summary", widget: "text", required: true }
+      - { label: "Contenu", name: "body", widget: "markdown", required: true }
+      - { label: "Date publication", name: "published_at", widget: "datetime", required: true }
+      - { label: "SEO title", name: "seo_title", widget: "string", required: true }
+      - { label: "SEO description", name: "seo_description", widget: "text", required: true }
+      - label: "Checklist publication"
+        name: "publication_checklist"
+        widget: "object"
+        required: true
+        fields:
+          - { label: "Message valide", name: "message_ok", widget: "boolean", default: false, required: true }
+          - { label: "Conformite legale verifiee", name: "legal_ok", widget: "boolean", default: false, required: true }
+          - { label: "Donnees minimales respectees", name: "data_ok", widget: "boolean", default: false, required: true }
+          - { label: "SEO complete", name: "seo_ok", widget: "boolean", default: false, required: true }
+      - { label: "Mise a jour", name: "updated_at", widget: "datetime", required: true }
+
+  - name: "legal"
+    label: "Contenus legaux"
+    folder: "content/legal"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titre", name: "title", widget: "string", required: true }
+      - { label: "Contenu", name: "body", widget: "markdown", required: true }
+      - { label: "SEO title", name: "seo_title", widget: "string", required: true }
+      - { label: "SEO description", name: "seo_description", widget: "text", required: true }
+      - label: "Checklist publication"
+        name: "publication_checklist"
+        widget: "object"
+        required: true
+        fields:
+          - { label: "Message valide", name: "message_ok", widget: "boolean", default: false, required: true }
+          - { label: "Conformite legale verifiee", name: "legal_ok", widget: "boolean", default: false, required: true }
+          - { label: "Donnees minimales respectees", name: "data_ok", widget: "boolean", default: false, required: true }
+          - { label: "SEO complete", name: "seo_ok", widget: "boolean", default: false, required: true }
+      - { label: "Mise a jour", name: "updated_at", widget: "datetime", required: true }

@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --diony-bg: #070016;
+    --diony-cyan: #23d9ff;
+    --diony-cyan-soft: #7be9ff;
+    --diony-pink: #ff2bb5;
+    --diony-purple: #7a2cff;
+  }
+
+  body {
+    @apply bg-[#070016] text-slate-100 antialiased;
+  }
+}

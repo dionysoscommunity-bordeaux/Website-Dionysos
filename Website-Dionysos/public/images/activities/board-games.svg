@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Session jeux de societe</title>
+  <desc id="desc">Illustration d'une table de jeux de societe avec plusieurs participants.</desc>
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#08001b"/>
+      <stop offset="100%" stop-color="#1a0440"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg3)"/>
+  <rect x="160" y="170" width="880" height="500" rx="30" fill="#0f0931" stroke="#7a2cff" stroke-width="3"/>
+  <rect x="260" y="270" width="180" height="180" rx="16" fill="#23d9ff" fill-opacity="0.18" stroke="#23d9ff" stroke-width="3"/>
+  <rect x="510" y="270" width="180" height="180" rx="16" fill="#ff2bb5" fill-opacity="0.18" stroke="#ff2bb5" stroke-width="3"/>
+  <rect x="760" y="270" width="180" height="180" rx="16" fill="#7a2cff" fill-opacity="0.24" stroke="#7a2cff" stroke-width="3"/>
+  <circle cx="350" cy="560" r="26" fill="#7be9ff"/>
+  <circle cx="600" cy="560" r="26" fill="#ff7ad5"/>
+  <circle cx="850" cy="560" r="26" fill="#b695ff"/>
+  <text x="170" y="120" fill="#7be9ff" font-family="Arial, sans-serif" font-size="56" font-weight="700">Jeux de societe</text>
+  <text x="170" y="740" fill="#e6e8f5" font-family="Arial, sans-serif" font-size="34">Format ludique pour rencontrer facilement</text>
+</svg>
