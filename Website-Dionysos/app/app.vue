@@ -1,17 +1,30 @@
 <script setup lang="ts">
 import { useConversionTracking } from '~/composables/useConversionTracking'
+import logoImage from '../image.png'
 
 const { trackConversionClick } = useConversionTracking()
 </script>
 
 <template>
-  <div class="min-h-screen bg-[#070016] text-slate-100">
+  <div class="relative isolate min-h-screen bg-[#070016] text-slate-100">
+    <div class="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
+      <img
+        src="/images/branding/dionysos-banner.png"
+        alt=""
+        class="absolute left-1/2 top-1/2 w-[1280px] max-w-[98vw] -translate-x-1/2 -translate-y-1/2 object-contain opacity-[0.14] blur-[0.5px] saturate-125"
+      >
+    </div>
     <NuxtRouteAnnouncer />
 
     <header class="sticky top-0 z-50 border-b border-[#23d9ff]/20 bg-[#070016]/80 backdrop-blur">
       <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
-        <NuxtLink to="/" class="text-sm font-semibold tracking-wide text-[#7be9ff] md:text-base">
-          DIONYSOS BORDEAUX
+        <NuxtLink to="/" class="inline-flex items-center gap-3 text-sm font-semibold tracking-wide text-[#7be9ff] md:text-base">
+          <img
+            :src="logoImage"
+            alt="Logo Dionysos Bordeaux"
+            class="h-10 w-10 rounded-full border border-[#23d9ff]/40 object-cover shadow-[0_0_18px_rgba(35,217,255,0.35)]"
+          >
+          <span>DIONYSOS BORDEAUX</span>
         </NuxtLink>
 
         <div class="flex items-center gap-2 md:gap-3">
@@ -57,9 +70,11 @@ const { trackConversionClick } = useConversionTracking()
       </nav>
     </header>
 
-    <NuxtPage />
+    <div class="relative z-10">
+      <NuxtPage />
+    </div>
 
-    <footer class="border-t border-[#ff2bb5]/20 bg-[#050012]/80">
+    <footer class="relative z-10 border-t border-[#ff2bb5]/20 bg-[#050012]/80">
       <div class="mx-auto flex max-w-6xl flex-col items-start justify-between gap-4 px-6 py-6 text-sm text-slate-300 md:flex-row md:items-center">
         <div class="space-y-2">
           <p>Communauté locale à Bordeaux. Sans dating, sans prise de tête.</p>

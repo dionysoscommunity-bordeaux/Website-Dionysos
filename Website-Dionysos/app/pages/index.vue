@@ -21,10 +21,17 @@ usePageSeo({
 
 <template>
   <main class="relative min-h-screen overflow-hidden bg-[#070016] text-slate-100">
+    <div class="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
+      <img
+        src="/images/branding/dionysos-banner.png"
+        alt=""
+        class="absolute left-1/2 top-1/2 w-[1200px] max-w-[96vw] -translate-x-1/2 -translate-y-1/2 object-contain opacity-[0.20] mix-blend-screen"
+      >
+    </div>
     <div class="pointer-events-none absolute -left-24 top-10 h-72 w-72 rounded-full bg-[#23d9ff]/20 blur-3xl" />
     <div class="pointer-events-none absolute -right-20 bottom-0 h-80 w-80 rounded-full bg-[#ff2bb5]/20 blur-3xl" />
 
-    <section class="relative mx-auto max-w-6xl px-6 py-16 md:py-24">
+    <section class="relative z-10 mx-auto max-w-6xl px-6 py-16 md:py-24">
       <p class="mb-4 inline-flex rounded-full border border-[#23d9ff]/50 bg-[#23d9ff]/10 px-4 py-1 text-sm font-medium text-[#7be9ff]">
         Communauté locale à Bordeaux
       </p>
@@ -87,7 +94,7 @@ usePageSeo({
       </div>
     </section>
 
-    <section class="relative mx-auto max-w-6xl px-6 pb-16">
+    <section class="relative z-10 mx-auto max-w-6xl px-6 pb-16">
       <h2 class="text-2xl font-bold text-white md:text-3xl">Annonces communautaires</h2>
       <p class="mt-2 max-w-3xl text-slate-300">
         Les infos utiles de la semaine, mises à jour par l'équipe via le CMS.
