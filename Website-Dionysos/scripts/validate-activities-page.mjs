@@ -5,7 +5,7 @@ const pagePath = resolve("app/pages/activites.vue");
 const source = await readFile(pagePath, "utf8");
 
 const requiredSnippets = [
-  "Taxonomie des activités",
+  "Chaque type de sortie te montre clairement",
   "Sorties food & bars",
   "Balades & explorations",
   "Jeux & activités ludiques",

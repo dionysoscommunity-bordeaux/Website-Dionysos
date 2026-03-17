@@ -34,8 +34,6 @@ usePageSeo({
 
 <template>
   <main class="relative min-h-screen overflow-x-hidden bg-[#070016] text-slate-100">
-    <div class="pointer-events-none absolute -left-20 top-20 h-72 w-72 rounded-full bg-[#23d9ff]/15 blur-3xl" />
-    <div class="pointer-events-none absolute -right-10 top-1/3 h-80 w-80 rounded-full bg-[#ff2bb5]/15 blur-3xl" />
     <section class="diony-reveal relative mx-auto w-full max-w-6xl px-6 pb-12 pt-14 md:pb-14 md:pt-20">
       <p class="mb-4 inline-flex rounded-full border border-[#23d9ff]/50 bg-[#23d9ff]/10 px-4 py-1 text-sm font-medium text-[#7be9ff]">
         Pilotage mensuel

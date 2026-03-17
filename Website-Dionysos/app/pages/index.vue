@@ -50,19 +50,6 @@ usePageSeo({
 
 <template>
   <main class="relative min-h-screen overflow-x-hidden bg-[#070016] text-slate-100">
-    <div class="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
-      <img
-        src="/images/branding/dionysos-banner.png"
-        alt=""
-        loading="lazy"
-        decoding="async"
-        width="1200"
-        height="675"
-        class="absolute left-1/2 top-1/2 w-[1200px] max-w-[96vw] -translate-x-1/2 -translate-y-1/2 object-contain opacity-[0.2] mix-blend-screen"
-      >
-    </div>
-    <div class="pointer-events-none absolute -left-24 top-10 h-72 w-72 rounded-full bg-[#23d9ff]/20 blur-3xl" />
-    <div class="pointer-events-none absolute -right-20 bottom-0 h-80 w-80 rounded-full bg-[#ff2bb5]/20 blur-3xl" />
 
     <section class="diony-reveal relative z-10 mx-auto w-full max-w-6xl px-6 pb-10 pt-14 md:pb-12 md:pt-20">
 
@@ -104,15 +91,15 @@ usePageSeo({
       </div>
 
       <div class="mt-8 grid gap-3 sm:grid-cols-3">
-        <article class="diony-card rounded-xl border border-white/10 bg-[#0b0322]/65 p-4">
+        <article class="py-2 sm:diony-card sm:rounded-xl sm:border sm:border-white/10 sm:bg-[#0b0322]/65 sm:p-4">
           <p class="text-xs uppercase tracking-wide text-slate-400">Ambiance</p>
           <p class="mt-1 text-sm text-slate-200">Conviviale, locale, sans pression.</p>
         </article>
-        <article class="diony-card rounded-xl border border-white/10 bg-[#0b0322]/65 p-4">
+        <article class="py-2 sm:diony-card sm:rounded-xl sm:border sm:border-white/10 sm:bg-[#0b0322]/65 sm:p-4">
           <p class="text-xs uppercase tracking-wide text-slate-400">Formats</p>
           <p class="mt-1 text-sm text-slate-200">Restos, balades, jeux, initiatives membres.</p>
         </article>
-        <article class="diony-card rounded-xl border border-white/10 bg-[#0b0322]/65 p-4">
+        <article class="py-2 sm:diony-card sm:rounded-xl sm:border sm:border-white/10 sm:bg-[#0b0322]/65 sm:p-4">
           <p class="text-xs uppercase tracking-wide text-slate-400">Ancrage</p>
           <p class="mt-1 text-sm text-slate-200">Quais, Chartrons, Saint-Michel, Bordeaux.</p>
         </article>
@@ -132,37 +119,37 @@ usePageSeo({
             {{ weekEvents.length }} sortie(s) cette semaine.
           </p>
         </div>
-        <NuxtLink
-          to="/calendrier"
-          class="inline-flex items-center justify-center rounded-lg border border-[#23d9ff]/45 px-4 py-2 text-sm font-semibold text-[#7be9ff] transition hover:bg-[#23d9ff]/10"
-        >
-          Voir toutes les sorties a venir
-        </NuxtLink>
       </div>
 
-      <div
-        v-if="weekEvents.length"
-        class="mt-5 grid max-h-[34rem] gap-4 overflow-y-auto pr-1 md:grid-cols-2"
-      >
-        <article
-          v-for="item in weekEvents"
-          :key="item.id"
-          class="diony-card rounded-2xl border border-[#23d9ff]/20 bg-[#090220]/80 p-5"
-        >
-          <p class="text-lg font-semibold text-white">{{ item.title }}</p>
-          <p class="mt-2 text-sm text-slate-300">{{ formatDate(item.startAt) }} · {{ item.location }}</p>
-          <a
-            v-if="item.eventUrl"
-            :href="item.eventUrl"
-            target="_blank"
-            rel="noopener noreferrer"
-            @click="trackConversionClick('discord', { placement: 'home_weekly_events' })"
-            class="mt-4 inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-[#23d9ff] to-[#0fb8ff] px-4 py-2 text-sm font-semibold text-[#050014] transition hover:brightness-110"
+        <template v-if="weekEvents.length">
+          <div class="mt-5 grid gap-4 md:grid-cols-2">
+            <article
+              v-for="item in weekEvents.slice(0, 3)"
+              :key="item.id"
+              class="diony-card rounded-2xl border border-[#23d9ff]/20 bg-[#090220]/80 p-5"
+            >
+              <p class="text-lg font-semibold text-white">{{ item.title }}</p>
+              <p class="mt-2 text-sm text-slate-300">{{ formatDate(item.startAt) }} · {{ item.location }}</p>
+              <a
+                v-if="item.eventUrl"
+                :href="item.eventUrl"
+                target="_blank"
+                rel="noopener noreferrer"
+                @click="trackConversionClick('discord', { placement: 'home_weekly_events' })"
+                class="mt-4 inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-[#23d9ff] to-[#0fb8ff] px-4 py-2 text-sm font-semibold text-[#050014] transition hover:brightness-110"
+              >
+                Voir la sortie sur Discord
+              </a>
+            </article>
+          </div>
+          <NuxtLink
+            to="/activites"
+            class="mt-4 inline-flex items-center gap-1 text-base font-semibold text-[#7be9ff] transition hover:text-white"
           >
-            Voir la sortie sur Discord
-          </a>
-        </article>
-      </div>
+            Voir nos sorties <span aria-hidden="true">→</span>
+          </NuxtLink>
+
+        </template>
 
       <div v-else class="mt-5 rounded-xl border border-white/10 bg-[#0b0322]/60 p-4 text-sm text-slate-300">
         Aucune sortie planifiee cette semaine pour le moment. Consulte tout de meme le calendrier complet.

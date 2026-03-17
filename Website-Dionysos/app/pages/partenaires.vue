@@ -61,8 +61,6 @@ usePageSeo({
 
 <template>
   <main class="relative min-h-screen overflow-x-hidden bg-[#070016] text-slate-100">
-    <div class="pointer-events-none absolute -left-20 top-20 h-72 w-72 rounded-full bg-[#23d9ff]/20 blur-3xl" />
-    <div class="pointer-events-none absolute -right-10 top-1/3 h-80 w-80 rounded-full bg-[#ff2bb5]/20 blur-3xl" />
 
     <section class="diony-reveal relative mx-auto w-full max-w-6xl px-6 pb-4 pt-12 md:pb-6 md:pt-16">
       <p class="mb-4 inline-flex rounded-full border border-[#23d9ff]/50 bg-[#23d9ff]/10 px-4 py-1 text-sm font-medium text-[#7be9ff]">
