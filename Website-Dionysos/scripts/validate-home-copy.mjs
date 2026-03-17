@@ -6,9 +6,7 @@ const source = await readFile(homePath, "utf8");
 
 const requiredPhrases = [
   "créée par ses membres, organisée par ses membres",
-  "pas de dating",
-  "Explore en un scroll",
-  "Annonces communautaires",
+  "Sorties à venir",
 ];
 
 const missing = requiredPhrases.filter((phrase) => !source.includes(phrase));

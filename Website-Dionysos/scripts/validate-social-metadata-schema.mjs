@@ -5,7 +5,6 @@ const seoComposable = await readFile(resolve("app/composables/usePageSeo.ts"), "
 const pageFiles = [
   "app/pages/index.vue",
   "app/pages/activites.vue",
-  "app/pages/communaute.vue",
   "app/pages/partenaires.vue",
   "app/pages/mentions-legales.vue",
   "app/pages/politique-de-confidentialite.vue",

@@ -15,7 +15,6 @@ const trackedPages = [
   "app/app.vue",
   "app/pages/index.vue",
   "app/pages/activites.vue",
-  "app/pages/communaute.vue",
   "app/pages/partenaires.vue",
 ];
 

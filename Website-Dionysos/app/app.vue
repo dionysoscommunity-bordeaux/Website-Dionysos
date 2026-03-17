@@ -3,6 +3,15 @@ import { useConversionTracking } from '~/composables/useConversionTracking'
 import logoImage from '../image.png'
 
 const { trackConversionClick } = useConversionTracking()
+const iconOnlyLogo = '/images/branding/dionysos-logo-no-text.png'
+
+useHead({
+  link: [
+    { rel: 'icon', type: 'image/png', href: iconOnlyLogo },
+    { rel: 'shortcut icon', type: 'image/png', href: iconOnlyLogo },
+    { rel: 'apple-touch-icon', href: iconOnlyLogo }
+  ]
+})
 </script>
 
 <template>
@@ -28,12 +37,6 @@ const { trackConversionClick } = useConversionTracking()
         </NuxtLink>
 
         <div class="flex items-center gap-2 md:gap-3">
-          <NuxtLink
-            to="/communaute"
-            class="hidden sm:inline-flex items-center justify-center rounded-lg border border-[#ff2bb5]/35 px-3 py-2 text-xs font-semibold text-[#ff7ad5] transition hover:bg-[#ff2bb5]/10 md:px-4 md:text-sm"
-          >
-            Avis
-          </NuxtLink>
           <NuxtLink
             to="/activites"
             class="hidden sm:inline-flex items-center justify-center rounded-lg border border-[#23d9ff]/30 px-3 py-2 text-xs font-semibold text-[#7be9ff] transition hover:bg-[#23d9ff]/10 md:px-4 md:text-sm"

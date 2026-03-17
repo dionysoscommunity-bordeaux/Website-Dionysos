@@ -1,7 +1,6 @@
 const ROUTES = [
   '/',
   '/activites',
-  '/communaute',
   '/partenaires',
   '/mentions-legales',
   '/politique-de-confidentialite',

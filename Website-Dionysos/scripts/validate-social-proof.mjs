@@ -1,19 +1,15 @@
 import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 
-const source = await readFile(resolve("app/pages/communaute.vue"), "utf8");
+const source = await readFile(resolve("app/pages/index.vue"), "utf8");
 
 const requiredSnippets = [
-  "/api/testimonials",
-  "/api/partners",
-  "v-for=\"item in testimonials\"",
-  "v-for=\"partner in partners\"",
-  "Impact:",
-  "Observer avant de rejoindre",
-  "intégration est progressive",
-  "sans engagement",
-  "Observer sur Instagram",
-  "Rejoindre le Discord",
+  "Temoignage membre",
+  "Membre Dionysos Bordeaux",
+  "disboard.org/server/1095026129619918981",
+  "Nos partenaires",
+  "Ragnarok Bordeaux",
+  "Wash Bar Bordeaux",
 ];
 
 const missing = requiredSnippets.filter((snippet) => !source.includes(snippet));
