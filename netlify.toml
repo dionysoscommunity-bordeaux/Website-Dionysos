@@ -1,0 +1,4 @@
+[build]
+  base = "Website-Dionysos"
+  command = "npm run generate"
+  publish = "dist"
