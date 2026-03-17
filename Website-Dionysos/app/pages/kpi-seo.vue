@@ -33,9 +33,10 @@ usePageSeo({
 </script>
 
 <template>
-  <main class="relative min-h-screen overflow-hidden bg-[#070016] text-slate-100">
+  <main class="relative min-h-screen overflow-x-hidden bg-[#070016] text-slate-100">
     <div class="pointer-events-none absolute -left-20 top-20 h-72 w-72 rounded-full bg-[#23d9ff]/15 blur-3xl" />
-    <section class="relative mx-auto max-w-6xl px-6 py-14 md:py-20">
+    <div class="pointer-events-none absolute -right-10 top-1/3 h-80 w-80 rounded-full bg-[#ff2bb5]/15 blur-3xl" />
+    <section class="diony-reveal relative mx-auto w-full max-w-6xl px-6 pb-12 pt-14 md:pb-14 md:pt-20">
       <p class="mb-4 inline-flex rounded-full border border-[#23d9ff]/50 bg-[#23d9ff]/10 px-4 py-1 text-sm font-medium text-[#7be9ff]">
         Pilotage mensuel
       </p>
@@ -46,7 +47,25 @@ usePageSeo({
         Suivi consolidé des positions, impressions, clics et conversions par mois.
       </p>
 
-      <div class="mt-8 overflow-x-auto rounded-2xl border border-[#23d9ff]/25 bg-[#0b0322]/80">
+      <div class="mt-8 grid gap-3 sm:grid-cols-3">
+        <article class="diony-card rounded-xl border border-white/10 bg-[#0b0322]/65 p-4">
+          <p class="text-xs uppercase tracking-wide text-slate-400">Vision</p>
+          <p class="mt-1 text-sm text-slate-200">Progression SEO suivie mois par mois.</p>
+        </article>
+        <article class="diony-card rounded-xl border border-white/10 bg-[#0b0322]/65 p-4">
+          <p class="text-xs uppercase tracking-wide text-slate-400">Performance</p>
+          <p class="mt-1 text-sm text-slate-200">Impressions, clics et conversions consolidés.</p>
+        </article>
+        <article class="diony-card rounded-xl border border-white/10 bg-[#0b0322]/65 p-4">
+          <p class="text-xs uppercase tracking-wide text-slate-400">Transparence</p>
+          <p class="mt-1 text-sm text-slate-200">Lecture simple du trend mensuel.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="diony-reveal diony-reveal-delay-1 relative mx-auto w-full max-w-6xl px-6 pb-16 pt-10 md:pb-20 md:pt-12">
+      <div class="mb-7 h-px w-full bg-gradient-to-r from-transparent via-[#23d9ff]/45 to-transparent" />
+      <div class="overflow-x-auto rounded-2xl border border-[#23d9ff]/25 bg-[#0b0322]/80">
         <table class="min-w-full text-sm">
           <thead class="border-b border-[#23d9ff]/20 bg-[#070016]/70 text-left text-[#7be9ff]">
             <tr>

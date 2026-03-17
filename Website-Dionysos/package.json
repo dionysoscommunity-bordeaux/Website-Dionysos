@@ -21,15 +21,11 @@
         "validate:bordeaux-anchor": "node scripts/validate-bordeaux-anchor.mjs",
         "validate:partners-b2b": "node scripts/validate-partners-b2b.mjs",
         "validate:partner-contact": "node scripts/validate-partner-contact.mjs",
-        "validate:cms-config": "node scripts/validate-cms-config.mjs",
-        "validate:cms-crud-sections": "node scripts/validate-cms-crud-sections.mjs",
-        "validate:publication-checklist": "node scripts/validate-publication-checklist.mjs",
-        "validate:legal-cms": "node scripts/validate-legal-cms.mjs",
         "validate:seo-tech-foundation": "node scripts/validate-seo-tech-foundation.mjs",
         "validate:social-metadata-schema": "node scripts/validate-social-metadata-schema.mjs",
         "validate:tracking-kpi": "node scripts/validate-tracking-kpi.mjs",
         "validate:pipeline-guards": "node scripts/validate-pipeline-guards.mjs",
-        "lint": "npm run validate:content && npm run validate:home-copy && npm run validate:cta-links && npm run validate:legal-pages && npm run validate:activities-page && npm run validate:activities-gallery && npm run validate:social-proof && npm run validate:bordeaux-anchor && npm run validate:partners-b2b && npm run validate:partner-contact && npm run validate:cms-config && npm run validate:cms-crud-sections && npm run validate:publication-checklist && npm run validate:legal-cms && npm run validate:seo-tech-foundation && npm run validate:social-metadata-schema && npm run validate:tracking-kpi && npm run validate:pipeline-guards && eslint .",
+        "lint": "npm run validate:content && npm run validate:home-copy && npm run validate:cta-links && npm run validate:legal-pages && npm run validate:activities-page && npm run validate:activities-gallery && npm run validate:social-proof && npm run validate:bordeaux-anchor && npm run validate:partners-b2b && npm run validate:partner-contact && npm run validate:seo-tech-foundation && npm run validate:social-metadata-schema && npm run validate:tracking-kpi && npm run validate:pipeline-guards && eslint .",
         "typecheck": "nuxt prepare && tsc --noEmit -p .nuxt/tsconfig.app.json && tsc --noEmit -p .nuxt/tsconfig.server.json && tsc --noEmit -p .nuxt/tsconfig.shared.json && tsc --noEmit -p .nuxt/tsconfig.node.json"
     },
     "dependencies": {

@@ -106,11 +106,11 @@ usePageSeo({
 </script>
 
 <template>
-  <main class="relative min-h-screen overflow-hidden bg-[#070016] text-slate-100">
+  <main class="relative min-h-screen overflow-x-hidden bg-[#070016] text-slate-100">
     <div class="pointer-events-none absolute -left-20 top-20 h-72 w-72 rounded-full bg-[#23d9ff]/20 blur-3xl" />
     <div class="pointer-events-none absolute right-0 top-1/3 h-80 w-80 rounded-full bg-[#ff2bb5]/20 blur-3xl" />
 
-    <section class="relative mx-auto max-w-6xl px-6 py-14 md:py-20">
+    <section class="diony-reveal relative mx-auto w-full max-w-6xl px-6 pb-10 pt-14 md:pb-12 md:pt-20">
       <p class="mb-4 inline-flex rounded-full border border-[#23d9ff]/50 bg-[#23d9ff]/10 px-4 py-1 text-sm font-medium text-[#7be9ff]">
         Activités Dionysos
       </p>
@@ -125,16 +125,33 @@ usePageSeo({
       <p class="mt-3 max-w-3xl text-base text-slate-300">
         Les activités se déroulent dans Bordeaux au sens large, selon les propositions des membres et les bons plans du moment.
       </p>
+
+      <div class="mt-8 grid gap-3 sm:grid-cols-3">
+        <article class="diony-card rounded-xl border border-white/10 bg-[#0b0322]/65 p-4">
+          <p class="text-xs uppercase tracking-wide text-slate-400">Fréquence</p>
+          <p class="mt-1 text-sm text-slate-200">Formats réguliers + temps forts ponctuels.</p>
+        </article>
+        <article class="diony-card rounded-xl border border-white/10 bg-[#0b0322]/65 p-4">
+          <p class="text-xs uppercase tracking-wide text-slate-400">Accessibilité</p>
+          <p class="mt-1 text-sm text-slate-200">Activités simples à rejoindre, même en solo.</p>
+        </article>
+        <article class="diony-card rounded-xl border border-white/10 bg-[#0b0322]/65 p-4">
+          <p class="text-xs uppercase tracking-wide text-slate-400">Local</p>
+          <p class="mt-1 text-sm text-slate-200">Repères bordelais concrets sur chaque format.</p>
+        </article>
+      </div>
     </section>
 
-    <section class="relative mx-auto grid max-w-6xl gap-5 px-6 pb-16 md:grid-cols-2">
+    <section class="diony-reveal diony-reveal-delay-1 relative mx-auto w-full max-w-6xl px-6 py-10 md:py-12">
+      <div class="mb-7 h-px w-full bg-gradient-to-r from-transparent via-[#23d9ff]/45 to-transparent" />
+      <div class="grid gap-5 md:grid-cols-2">
       <p class="md:col-span-2 text-sm text-slate-300">
         Taxonomie des activités : chaque type indique un rythme, un format et une ambiance pour aider à choisir rapidement.
       </p>
       <article
         v-for="category in categories"
         :key="category.title"
-        class="rounded-2xl border border-[#23d9ff]/20 bg-[#0b0322]/80 p-6 shadow-[0_0_18px_rgba(35,217,255,0.08)]"
+        class="diony-card rounded-2xl border border-[#23d9ff]/20 bg-[#0b0322]/80 p-6 shadow-[0_0_18px_rgba(35,217,255,0.08)] transition hover:-translate-y-0.5 hover:border-[#23d9ff]/35"
       >
         <h2 class="text-2xl font-bold text-white">{{ category.title }}</h2>
         <p class="mt-3 text-slate-300">{{ category.summary }}</p>
@@ -164,9 +181,11 @@ usePageSeo({
           </li>
         </ul>
       </article>
+      </div>
     </section>
 
-    <section class="relative mx-auto max-w-6xl px-6 pb-16">
+    <section class="diony-reveal diony-reveal-delay-1 relative mx-auto w-full max-w-6xl px-6 py-10 md:py-12">
+      <div class="mb-7 h-px w-full bg-gradient-to-r from-transparent via-[#ff2bb5]/45 to-transparent" />
       <h2 class="text-2xl font-bold text-white md:text-3xl">Repères bordelais fréquents</h2>
       <p class="mt-2 max-w-3xl text-slate-300">
         Sans page quartier dédiée, on garde des références concrètes pour montrer la réalité locale des sorties.
@@ -181,7 +200,8 @@ usePageSeo({
       </ul>
     </section>
 
-    <section class="relative mx-auto max-w-6xl px-6 pb-20">
+    <section class="diony-reveal diony-reveal-delay-2 relative mx-auto w-full max-w-6xl px-6 py-10 md:py-12">
+      <div class="mb-7 h-px w-full bg-gradient-to-r from-transparent via-[#23d9ff]/45 to-transparent" />
       <div class="mb-6">
         <h2 class="text-3xl font-bold text-white md:text-4xl">Exemples concrets en images</h2>
         <p class="mt-2 max-w-3xl text-slate-300">
@@ -189,11 +209,11 @@ usePageSeo({
         </p>
       </div>
 
-      <div class="grid gap-5 md:grid-cols-2">
+      <div class="grid gap-5 md:grid-cols-6">
         <figure
           v-for="item in mediaItems"
           :key="item.title"
-          class="overflow-hidden rounded-2xl border border-[#23d9ff]/20 bg-[#0b0322]/80"
+          class="diony-card overflow-hidden rounded-2xl border border-[#23d9ff]/20 bg-[#0b0322]/80 transition hover:-translate-y-0.5 hover:border-[#23d9ff]/35 md:col-span-3"
         >
           <img
             :src="item.src"
@@ -216,7 +236,8 @@ usePageSeo({
       </div>
     </section>
 
-    <section class="relative mx-auto max-w-6xl px-6 pb-20">
+    <section class="diony-reveal diony-reveal-delay-2 relative mx-auto w-full max-w-6xl px-6 pb-16 pt-10 md:pb-20 md:pt-12">
+      <div class="mb-7 h-px w-full bg-gradient-to-r from-transparent via-[#ff2bb5]/45 to-transparent" />
       <div class="rounded-2xl border border-[#23d9ff]/30 bg-[#0b0322]/85 p-6 md:p-8">
         <h2 class="text-2xl font-bold text-white md:text-3xl">Rejoindre la communauté</h2>
         <p class="mt-3 max-w-3xl text-slate-300">

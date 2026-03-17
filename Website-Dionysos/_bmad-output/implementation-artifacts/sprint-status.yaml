@@ -59,13 +59,6 @@ development_status:
   3-2-implementer-le-canal-de-contact-partenaire: done
   epic-3-retrospective: optional
 
-  epic-4: done
-  4-1-mettre-en-place-decap-cms-et-workflow-editorial: done
-  4-2-gerer-temoignages-partenaires-et-annonces: done
-  4-3-appliquer-la-checklist-qualite-avant-publication: done
-  4-4-gerer-les-contenus-legaux-via-cms: done
-  epic-4-retrospective: optional
-
   epic-5: done
   5-1-implementer-le-socle-seo-technique: done
   5-2-implementer-les-metadonnees-sociales-et-schema-org: done

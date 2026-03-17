@@ -59,13 +59,6 @@ development_status:
   3-2-implementer-le-canal-de-contact-partenaire: backlog
   epic-3-retrospective: optional
 
-  epic-4: backlog
-  4-1-mettre-en-place-decap-cms-et-workflow-editorial: backlog
-  4-2-gerer-temoignages-partenaires-et-annonces: backlog
-  4-3-appliquer-la-checklist-qualite-avant-publication: backlog
-  4-4-gerer-les-contenus-legaux-via-cms: backlog
-  epic-4-retrospective: optional
-
   epic-5: backlog
   5-1-implementer-le-socle-seo-technique: backlog
   5-2-implementer-les-metadonnees-sociales-et-schema-org: backlog

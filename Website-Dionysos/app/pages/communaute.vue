@@ -49,11 +49,11 @@ usePageSeo({
 </script>
 
 <template>
-  <main class="relative min-h-screen overflow-hidden bg-[#070016] text-slate-100">
+  <main class="relative min-h-screen overflow-x-hidden bg-[#070016] text-slate-100">
     <div class="pointer-events-none absolute -left-20 top-20 h-72 w-72 rounded-full bg-[#ff2bb5]/20 blur-3xl" />
     <div class="pointer-events-none absolute -right-10 top-1/4 h-80 w-80 rounded-full bg-[#23d9ff]/20 blur-3xl" />
 
-    <section class="relative mx-auto max-w-6xl px-6 py-14 md:py-20">
+    <section class="diony-reveal relative mx-auto w-full max-w-6xl px-6 pb-10 pt-14 md:pb-12 md:pt-20">
       <p class="mb-4 inline-flex rounded-full border border-[#ff2bb5]/40 bg-[#ff2bb5]/10 px-4 py-1 text-sm font-medium text-[#ff7ad5]">
         Preuve sociale
       </p>
@@ -66,15 +66,31 @@ usePageSeo({
       <p class="mt-3 max-w-3xl text-base text-slate-300">
         Les retours viennent de membres qui se croisent dans différents coins de Bordeaux, pas d'un seul secteur.
       </p>
+
+      <div class="mt-8 grid gap-3 sm:grid-cols-3">
+        <article class="diony-card rounded-xl border border-white/10 bg-[#0b0322]/65 p-4">
+          <p class="text-xs uppercase tracking-wide text-slate-400">Confiance</p>
+          <p class="mt-1 text-sm text-slate-200">Des retours concrets, pas des promesses floues.</p>
+        </article>
+        <article class="diony-card rounded-xl border border-white/10 bg-[#0b0322]/65 p-4">
+          <p class="text-xs uppercase tracking-wide text-slate-400">Diversité</p>
+          <p class="mt-1 text-sm text-slate-200">Profils variés selon les activités et moments.</p>
+        </article>
+        <article class="diony-card rounded-xl border border-white/10 bg-[#0b0322]/65 p-4">
+          <p class="text-xs uppercase tracking-wide text-slate-400">Ancrage local</p>
+          <p class="mt-1 text-sm text-slate-200">Collabs et rencontres dans Bordeaux réel.</p>
+        </article>
+      </div>
     </section>
 
-    <section class="relative mx-auto max-w-6xl px-6 pb-12">
+    <section class="diony-reveal diony-reveal-delay-1 relative mx-auto w-full max-w-6xl px-6 py-10 md:py-12">
+      <div class="mb-7 h-px w-full bg-gradient-to-r from-transparent via-[#23d9ff]/45 to-transparent" />
       <h2 class="text-2xl font-bold text-white md:text-3xl">Ils racontent leur expérience</h2>
-      <div class="mt-5 grid gap-4 md:grid-cols-3">
+      <div class="mt-5 grid gap-4 md:grid-cols-6">
         <article
           v-for="item in testimonials"
           :key="item.slug"
-          class="rounded-2xl border border-[#23d9ff]/20 bg-[#0b0322]/80 p-5"
+          class="diony-card rounded-2xl border border-[#23d9ff]/20 bg-[#0b0322]/80 p-5 transition hover:-translate-y-0.5 hover:border-[#23d9ff]/35 md:col-span-2"
         >
           <p class="text-slate-200">"{{ item.quote }}"</p>
           <p class="mt-4 font-semibold text-[#7be9ff]">{{ item.name }}</p>
@@ -83,14 +99,15 @@ usePageSeo({
       </div>
     </section>
 
-    <section class="relative mx-auto max-w-6xl px-6 pb-12">
+    <section class="diony-reveal diony-reveal-delay-2 relative mx-auto w-full max-w-6xl px-6 py-10 md:py-12">
+      <div class="mb-7 h-px w-full bg-gradient-to-r from-transparent via-[#ff2bb5]/45 to-transparent" />
       <h2 class="text-2xl font-bold text-white md:text-3xl">Partenaires locaux</h2>
       <p class="mt-2 max-w-3xl text-slate-300">Des structures bordelaises qui contribuent à faire vivre les activités Dionysos.</p>
-      <div class="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="mt-5 grid gap-4 md:grid-cols-6">
         <article
           v-for="partner in partners"
           :key="partner.slug"
-          class="rounded-2xl border border-[#ff2bb5]/25 bg-[#11062d]/85 p-5"
+          class="diony-card rounded-2xl border border-[#ff2bb5]/25 bg-[#11062d]/85 p-5 transition hover:-translate-y-0.5 hover:border-[#ff2bb5]/45 md:col-span-3 lg:col-span-2"
         >
           <p class="text-sm font-medium text-[#ff7ad5]">{{ partner.type }}</p>
           <p class="mt-2 text-lg font-bold text-white">{{ partner.name }}</p>
@@ -100,7 +117,8 @@ usePageSeo({
       </div>
     </section>
 
-    <section class="relative mx-auto max-w-6xl px-6 pb-20">
+    <section class="diony-reveal diony-reveal-delay-2 relative mx-auto w-full max-w-6xl px-6 pb-16 pt-10 md:pb-20 md:pt-12">
+      <div class="mb-7 h-px w-full bg-gradient-to-r from-transparent via-[#23d9ff]/45 to-transparent" />
       <div class="rounded-2xl border border-[#23d9ff]/30 bg-[#0b0322]/85 p-6 md:p-8">
         <h2 class="text-2xl font-bold text-white md:text-3xl">Observer avant de rejoindre</h2>
         <p class="mt-3 max-w-3xl text-slate-300">

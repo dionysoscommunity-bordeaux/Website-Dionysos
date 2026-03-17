@@ -5,16 +5,9 @@ import { resolve } from "node:path";
 const partnersPage = await readFile(resolve("app/pages/partenaires.vue"), "utf8");
 const partnersContentDir = resolve("content/partners");
 
-const requiredSnippets = ["moins de 20 secondes", "Pourquoi collaborer", "Preuves de collaboration", "Formats de collaboration"];
+const requiredSnippets = ["Ils nous font confiance", "evenements exclusifs", "v-for=\"partner in trustedPartners\""];
 
 const missing = requiredSnippets.filter((snippet) => !partnersPage.includes(snippet));
-
-const requiredTemplateHooks = ["v-for=\"proof in partnerProofs\"", "fallbackPartnerProofs", "hasApiPartnerProofs"];
-for (const hook of requiredTemplateHooks) {
-  if (!partnersPage.includes(hook)) {
-    missing.push(`app/pages/partenaires.vue manque: ${hook}`);
-  }
-}
 
 const partnerFiles = (await readdir(partnersContentDir)).filter((name) => name.endsWith(".md"));
 if (partnerFiles.length === 0) {

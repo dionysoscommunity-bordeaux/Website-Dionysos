@@ -15,3 +15,48 @@
     @apply bg-[#070016] text-slate-100 antialiased;
   }
 }
+
+@keyframes dionyFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer components {
+  .diony-reveal {
+    animation: dionyFadeUp 0.45s ease-out both;
+  }
+
+  .diony-reveal-delay-1 {
+    animation-delay: 0.08s;
+  }
+
+  .diony-reveal-delay-2 {
+    animation-delay: 0.16s;
+  }
+
+  .diony-card {
+    transition: transform 200ms ease, border-color 250ms ease, box-shadow 250ms ease, background-color 250ms ease;
+  }
+
+  .diony-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(8, 3, 28, 0.35);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .diony-reveal,
+  .diony-reveal-delay-1,
+  .diony-reveal-delay-2,
+  .diony-card {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}
