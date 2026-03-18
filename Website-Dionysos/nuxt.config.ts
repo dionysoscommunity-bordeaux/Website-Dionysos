@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css"],
   runtimeConfig: {
     public: {
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || "https://dionysos-bordeaux.fr",
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || "https://dionysosbordeaux.com",
       siteName: "Dionysos Bordeaux",
       robotsDisallow: process.env.NUXT_PUBLIC_ROBOTS_DISALLOW || "",
       siteLastmod: process.env.NUXT_PUBLIC_SITE_LASTMOD || "2026-02-26"

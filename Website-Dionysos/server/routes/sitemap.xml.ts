@@ -9,7 +9,7 @@ const ROUTES = [
 
 export default defineEventHandler((event) => {
   const config = useRuntimeConfig(event)
-  const siteUrl = String(config.public.siteUrl || '').trim() || 'https://dionysos-bordeaux.fr'
+  const siteUrl = String(config.public.siteUrl || '').trim() || 'https://dionysosbordeaux.com'
   const rawLastmod = String(config.public.siteLastmod || '').trim()
   const isIsoDate = /^\d{4}-\d{2}-\d{2}$/.test(rawLastmod)
   const siteLastmod = isIsoDate ? rawLastmod : '2026-02-26'

@@ -42,8 +42,9 @@ const formatDate = (input: string) =>
 const { trackConversionClick } = useConversionTracking()
 
 usePageSeo({
-  title: 'Accueil',
-  description: 'Communauté locale à Bordeaux pour sorties, rencontres amicales et activités conviviales.',
+  title: 'Dionysos Bordeaux - Communaute sorties et rencontres amicales',
+  description: 'Dionysos Bordeaux est une communaute locale pour sorties, rencontres amicales et activites conviviales a Bordeaux.',
+  appendSiteName: false,
   path: '/'
 })
 </script>

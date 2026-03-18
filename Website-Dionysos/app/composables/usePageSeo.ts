@@ -20,7 +20,7 @@ type EventSchemaInput = {
 export function usePageSeo(input: PageSeoInput) {
   const route = useRoute()
   const config = useRuntimeConfig()
-  const siteUrl = String(config.public.siteUrl || '').trim() || 'https://dionysos-bordeaux.fr'
+  const siteUrl = String(config.public.siteUrl || '').trim() || 'https://dionysosbordeaux.com'
   const siteName = config.public.siteName as string
   const canonicalPath = input.path || route.path
   const canonicalUrl = new URL(canonicalPath, siteUrl).toString()
